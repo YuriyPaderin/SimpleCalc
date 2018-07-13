@@ -33,12 +33,14 @@ namespace SimpleCalcWithDevExpress
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
+            View.BeginEdit();
             View.Row["Expression"] = textEdit1.EditValue;
             View.Row["Result"] = textEdit2.EditValue;
             View.Row["DateAndTime"] = textEdit3.EditValue;
             View.Row["HostName"] = textEdit4.EditValue;
             View.Row["ErrorCode"] = textEdit5.EditValue;
             View.Row["Message"] = textEdit6.EditValue;
+            View.EndEdit();
             this.Close();
         }
 

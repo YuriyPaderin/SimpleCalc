@@ -69,9 +69,9 @@
       <DependentUpon>DataBaseForSimpleCalcDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataBaseForSimpleCalcDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>DataBaseForSimpleCalcDataSet.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -110,9 +110,9 @@
       <DependentUpon>DataBaseForSimpleCalcDataSet.xsd</DependentUpon>
     </None>
     <None Include="DataBaseForSimpleCalcDataSet.xsd">
+      <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataBaseForSimpleCalcDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </None>
     <None Include="DataBaseForSimpleCalcDataSet.xss">
       <DependentUpon>DataBaseForSimpleCalcDataSet.xsd</DependentUpon>

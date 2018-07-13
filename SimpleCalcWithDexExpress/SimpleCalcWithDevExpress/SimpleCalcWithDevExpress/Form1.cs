@@ -12,7 +12,6 @@ namespace SimpleCalcWithDevExpress
 {
     public partial class Form1 : DevExpress.XtraEditors.XtraForm
     {
-        private bool _dataModificationStage = false;
         private string[] _errorTable = { "Вы ввели неизвестную операцию.", "Неверный формат строки.", "Неверное соотношение цифр и операций.", "Неизвестный тип ошибки" };
 
         public Form1()
@@ -46,21 +45,17 @@ namespace SimpleCalcWithDevExpress
 
         private void EditButton_Click(object sender, EventArgs e)
         {
-            _dataModificationStage = !_dataModificationStage;
-            EditButton.ForeColor = _dataModificationStage ? Color.Blue : Color.Black;
+            var view = (DataRowView)gridView1.GetFocusedRow();
+
+            var form = new Form2(view);
+            form.ShowDialog();
+            form.Dispose();
         }
 
-        private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (_dataModificationStage)
-            {
-                var view = (DataRowView)gridView1.GetFocusedRow();
-
-                var form = new Form2(view);
-                form.Show();
-
-                view = form.View;
-            }
+            this.notesTableAdapter.Update(dataBaseForSimpleCalcDataSet.Notes);
+            dataBaseForSimpleCalcDataSet.Notes.AcceptChanges();
         }
     }
 }

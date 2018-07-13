@@ -95,7 +95,7 @@
             this.SaveButton.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SaveButton.Appearance.Options.UseFont = true;
             this.SaveButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SaveButton.Location = new System.Drawing.Point(24, 528);
+            this.SaveButton.Location = new System.Drawing.Point(24, 506);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(193, 23);
             this.SaveButton.TabIndex = 4;
@@ -107,7 +107,7 @@
             this.CancelButton.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CancelButton.Appearance.Options.UseFont = true;
             this.CancelButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CancelButton.Location = new System.Drawing.Point(223, 528);
+            this.CancelButton.Location = new System.Drawing.Point(223, 506);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(193, 23);
             this.CancelButton.TabIndex = 5;
@@ -200,8 +200,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(445, 602);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(445, 555);
             this.Controls.Add(this.textEdit6);
             this.Controls.Add(this.textEdit5);
             this.Controls.Add(this.textEdit4);
